@@ -60,26 +60,21 @@
   <ul class="" v-if="products.length">
     <li v-for="product in products" :key="product.id"></li>
     <div
-      class="lg:w-4/6 w-4/7 mx-auto overflow-auto whitespace-no-wrap sm:flex-row bg-gray-50"
+      class="lg:w-4/6 w-4/7  mx-auto overflow-auto whitespace-no-wrap sm:flex-row bg-gray-50"
     >
-      <table class="table-auto text-left h-screen whitespace-no-wrap">
+      <table class=" table-auto text-left h-screen whitespace-no-wrap">
         <thead>
           <tr>
             <th
-              class="px-2 py-3 sm:text-1xl title-font tracking-wider font-bold text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl"
+              class="px-2 py-3  lg:text-1xl text-2xl  text-center title-font tracking-wider  font-bold text-gray-900  bg-gray-100 rounded-tl rounded-bl"
             >
-              List Of Products
+              List Of Products 
             </th>
-            <th
-              class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100"
-            ></th>
-            <th
-              class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100"
-            ></th>
+           
           </tr>
         </thead>
 
-        <tbody v-if="products.length" class="space-y-2 flex-row">
+        <tbody v-if="products.length" class="space-y-  flex-row">
           <li v-for="product in products" :key="product.id">
             <div class="space-x-3" v-if="product.editMode">
               <input
@@ -111,7 +106,7 @@
               </button>
             </div>
 
-            <tr v-else class="space-x-2 title-font font-semibold text-gray-900">
+            <tr v-else class="space-x-2  title-font font-semibold text-gray-900">
               {{
                 product.title
               }}
@@ -123,7 +118,7 @@
               {{
                 product.price
               }}
-              <div class="space-x-2 space-y-3">
+              <div class="space-x-2 space-y-1 my-1">
                 <button
                   class="bg-blue-400 hover:bg-blue-500 text-gray-50 font-semibold py-1 px-3 rounded"
                   @click="editProduct(product)"
